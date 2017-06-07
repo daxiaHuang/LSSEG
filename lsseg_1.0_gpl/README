@@ -1,0 +1,40 @@
+This is the GPL version 1.0 of the Level-Set Segmentation Library.
+
+If you have Doxygen installed, you can generate an introduction to LSSEG and 
+code documentation by typing 'doxygen' at the command prompt.
+
+COMPILING INSTRUCTIONS:
+
+In order to compile LSSEG, you need the CImg library (http://cimg.sourceforge.net/).
+This library is all implemented in a header file which you should copy to the
+LSSEG include/ directory or otherwise include in your project.
+The version of CImg for which this software was adapted is 1.17.
+CImg is mainly used in LSSEG for image visualization and reading/writing of images
+to file.  All code which depend on CImg is declared/implemented in the 
+files 'cimg_dependent.h' and 'cimg_dependent.C'.
+
+You will also need the 'boost' library (www.boost.org).
+
+COMPILING FOR LINUX USERS:
+
+The provided Makefile has only been prepared for the linux platform.  
+There is no configuration script, so you might have to manually edit the Makefile 
+in order to make it work.  
+
+To make the library, type 'make' or 'make lib' at the command prompt.  (The library
+file will be saved in the 'lib' directory).
+
+To make one of the sample programs,type 'make app/*****', where ***** is the name of the
+example program.
+
+COMPILING FOR VISUAL STUDIO USERS:
+
+You will have to establish your own project, using the include files from the include/ 
+directory and the source files from the source/ directory in order to compile the
+library.
+
+If you want to compile a sample program, add its source file (found in the app/ directory)
+to your project.  This is the file containing the main() function.
+
+You will have to link with ImageMagick (http://www.imagemagick.org/script/index.php) and
+PthreadsWin32 (http://sources.redhat.com/pthreads-win32/) in order to make it work.
